@@ -1,0 +1,29 @@
+{
+  "name": "cyf-ecommerce-api",
+  "version": "1.0.0",
+  "description": "server",
+  "private": "true",
+  "type": "module",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "start": "node server.js",
+    "dev": "concurently --kill-others-on-fail",
+    "test": "echo 'Error: no test specified' && exit 1",
+    "dev:client": "cd client && npm run start",
+    "dev:server": "cd server && npm run dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mysql": "^2.18.1",
+    "pg": "^8.11.3",
+    "request": "^2.88.2"
+  }
+}
