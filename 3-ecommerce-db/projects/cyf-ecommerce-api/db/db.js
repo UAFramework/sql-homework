@@ -1,10 +1,12 @@
 import pg from "pg";
 import config from "./config.js";
 
+const dbURL = process.env.DATABASE_URL || "postgres://sana:9jFvKN5g9NTnbWb0h9RwfvG77BC84dON@dpg-cmehpfun7f5s73frr2k0-a.frankfurt-postgres.render.com/exemple_postgresssql_sana"
+
 const pool = new pg.Pool({
 	connectionString: config.dbUrl,
 	connectionTimeoutMillis: 5000,
-	ssl: config.dbUrl.includes("localhost")
+	ssl: config.dbUrl.includes("dpg-cmehpfun7f5s73frr2k0-a.frankfurt-postgres.render.com")
 		? false
 		: { rejectUnauthorized: false },
 });

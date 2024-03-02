@@ -1,6 +1,8 @@
-import express from "express";
 import cors from "cors"
-import db from "./components/db/db.js";
+import db from "./db/db.js";
+import express from "express";
+// const express = require("express");
+
 
 const app = express();
 app.use(express.json())
@@ -39,9 +41,6 @@ app.get("/suppliers", async (req, res) => {
 });
 
 
-
-app.listen(3001, function () {
-    const addressInfo = this.address();
-    console.log(`Back-End server is running at http://localhost:${addressInfo.port}`);
-});
-
+app.listen(3000, function () {
+    console.log("Server is listening on port 3000. Ready to accept requests!");
+  });
